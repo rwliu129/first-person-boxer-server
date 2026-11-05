@@ -1,0 +1,12 @@
+# Render Blueprint (optional): Render can create the service from this file.
+services:
+  - type: web
+    name: first-person-boxer-server
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: ""
